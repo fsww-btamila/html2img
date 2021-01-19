@@ -151,16 +151,18 @@ module.exports.HtmlToImage = async (request, res) => {
           const base64Image = new Buffer.from(img).toString('base64');
           const dataURI = 'data:image/jpeg;base64,' + base64Image;
 
-          var utc = (moment.utc()).valueOf();
-          var path = 'tmp/image/';
-          var fname = 'fileName' +'_'+utc+'.jpg';
-          var fileLocation = path + fname;
+          // var utc = (moment.utc()).valueOf();
+          // var path = 'tmp/image/';
+          // var fname = 'fileName' +'_'+utc+'.jpg';
+          // var fileLocation = path + fname;
 
-          fs.writeFile(fileLocation, base64Image, 'base64', function(err) {
-          if (err) { console.log(err) } else {
-            console.log("Image Uploaded successfully..")
+          // fs.writeFile(fileLocation, base64Image, 'base64', function(err) {
+          // if (err) { console.log(err) } else {
+          //   console.log("Image Uploaded successfully..")
 
-          }});
+          // }});
+
+          
 
           resultObj = {
             'Msg':'Image created successfully...',
@@ -178,16 +180,16 @@ module.exports.HtmlToImage = async (request, res) => {
         const base64Image = new Buffer.from(pdf).toString('base64');
         const dataURI = 'data:application/pdf;base64,' + base64Image;
 
-        var utc = (moment.utc()).valueOf();
-        var path = 'tmp/pdf/';
-        var fname = 'fileName' +'_'+utc+'.pdf';
-        var fileLocation = path + fname;
+        // var utc = (moment.utc()).valueOf();
+        // var path = 'tmp/pdf/';
+        // var fname = 'fileName' +'_'+utc+'.pdf';
+        // var fileLocation = path + fname;
 
-        fs.writeFile(fileLocation, base64Image, 'base64', function(err) {
-        if (err) { console.log(err) } else {
-          console.log("PDF Uploaded successfully..")
+        // fs.writeFile(fileLocation, base64Image, 'base64', function(err) {
+        // if (err) { console.log(err) } else {
+        //   console.log("PDF Uploaded successfully..")
 
-        }});
+        // }});
 
         // window.open(dataURI, "_blank")
         resultObj = {
