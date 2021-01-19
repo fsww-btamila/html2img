@@ -1,7 +1,7 @@
 const nodeHtmlToImage = require('node-html-to-image');
 const html2pdf = require('html-pdf-node');
 
-const puppeteer = require('puppeteer');
+// const puppeteer = require('puppeteer');
 
 // const  htmlToImage = require('html-to-image');
 
